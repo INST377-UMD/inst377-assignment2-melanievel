@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>Assignment 2 - Stocks</title>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/annyang/2.6.0/annyang.min.js"></script>
+        <link rel="stylesheet" href="INST377-Assignment2.css" />
+        <script src='INST377-Assignment2-Stocks.js' defer></script>
+        <style>
+          #chartDiv {
+            width: 75%;
+            margin-left: 12.5%;
+            margin-right: 12.5%;
+          }
+        </style>
+    </head>
+
+    <body>
+        <h1>INST377 - Activities</h1>
+    <!-- Navigation Section -->
+        <nav id="main-nav">
+            <ul>
+            <li><a href="INST377-Assignment2-Home.html">Home</a></li>
+            <li><a href="INST377-Assignment2-Stocks.html">Stocks</a></li>
+            <li><a href="INST377-Assignment2-Dogs.html">Dogs</a></li>
+            </ul>
+        </nav>
+
+        <h1>Let's chart some stocks!</h1>
+        <form id="myForm" > 
+            <input type="text" id="searchBar"  maxlength="5" minlength="3" required/>
+        <br>
+        <select id="selectDays" name="selectDays">
+            <option value="30">30 Days</option>
+            <option value="60">60 Days</option>
+            <option value="90">90 Days</option>
+        </select>
+        <br>
+        <button class="button-65">Search</button>
+        </form>
+        
+
+        <div id="chartDiv">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <table id="stocksTable">
+            <tr>
+                <th>Ticker</th>
+                <th>Coment Count</th>
+                <th>Sentiment</th>
+            </tr>
+        </table>
+
+        <div class="audioInstructions">
+            <h1>In this webpage there are options to navigate using audio!</h1>
+            <p>Ensure your mic is enabled to be able to use this feature</p>
+              <dl>
+                <ul >
+                  <li>
+                    <dt>Navigate to a different page</dt>
+                    <dd>- Say: <b>Navigate to &ltpage></b></dd>
+                  </li>
+                  <li>
+                    <dt>Change the page color</dt>
+                    <dd>- Say: <b>Change the color to &ltcolor></b></dd>
+                  </li>
+                  <li>
+                    <dt>Say Hello back to you!</dt>
+                    <dd>- Say: <b>Hello</b></dd>
+                  </li>
+                  <li>
+                    <dt>Lookup stock chart</dt>
+                    <dd>- Say: <b>Lookup &ltstock></b></stock></dd>
+                  </li>
+                </ul>
+                <br>
+                <button id="audioOn" class="button-65" role="button" >Turn On Audio</button>
+                <button id="audioOff" class="button-65" role="button">Turn Off Audio</button>
+              </dl>
+          </div>
+    </body>
+</html>
